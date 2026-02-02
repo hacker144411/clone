@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Dukan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page (Initially visible) -->
+    <div id="loginPage">
+        <div class="container">
+            <div class="login-container" id="loginContainer">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    Apni Dukan
+                </div>
+                <h2>Login to your account</h2>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                <button class="login-btn" id="loginBtn">Login</button>
+                <p class="footer-text">Use any valid email and password to login</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App (Initially hidden) -->
+    <div class="app-container" id="appContainer">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <a href="#" class="header-logo" id="homeLink">
+                    <i class="fas fa-shopping-bag"></i>
+                    Apni Dukan
+                </a>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for products, brands and more">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions">
+                    <span id="userEmail">Welcome</span>
+                    <button class="logout-btn" id="logoutBtn">Logout</button>
+                    <button class="contact-us-btn" id="contactUsBtn">Contact Us</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <div class="nav-content">
+                <a href="#" class="nav-link" id="navHome">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#" class="nav-link" id="navElectronics">
+                    <i class="fas fa-tv"></i> Electronics
+                </a>
+                <a href="#" class="nav-link" id="navFashion">
+                    <i class="fas fa-tshirt"></i> Fashion
+                </a>
+                <a href="#" class="nav-link" id="navAppliances">
+                    <i class="fas fa-blender"></i> Appliances
+                </a>
+                <a href="#" class="nav-link" id="navMobiles">
+                    <i class="fas fa-mobile-alt"></i> Mobiles
+                </a>
+            </div>
+        </nav>
+
+        <!-- Products Page -->
+        <div class="products-container" id="productsPage">
+            <h2 class="products-title">Trending Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Product Details Page -->
+        <div class="product-details-container" id="productDetailsPage">
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i> Back to Products
+            </button>
+            <div class="product-details">
+                <div class="details-img">
+                    <img id="detailsImg" src="" alt="Product Image">
+                </div>
+                <div class="details-info">
+                    <h2 class="details-title" id="detailsTitle"></h2>
+                    <div class="details-price" id="detailsPrice"></div>
+                    <div class="details-original-price" id="detailsOriginalPrice"></div>
+                    <div class="details-discount" id="detailsDiscount"></div>
+                    <p class="details-description" id="detailsDescription"></p>
+                    <div class="specifications">
+                        <h4>Specifications</h4>
+                        <ul id="specificationsList">
+                        </ul>
+                    </div>
+                    <button class="details-buy-btn" id="detailsBuyBtn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receipt Page -->
+        <div class="receipt-container" id="receiptPage">
+            <div class="receipt">
+                <div class="receipt-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Order Confirmed!</h2>
+                    <p>Your order has been successfully placed.</p>
+                </div>
+                <div class="receipt-details" id="receiptDetails">
+                    <!-- Receipt details will be added dynamically -->
+                </div>
+                <div class="receipt-total" id="receiptTotal"></div>
+                <button class="home-btn" id="homeBtn">Continue Shopping</button>
+            </div>
+        </div>
+
+        <!-- Contact Us Page -->
+        <div class="contact-container" id="contactPage">
+            <div class="contact-content">
+                <h2 class="contact-title">Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Customer Support</h3>
+                        <p>24/7 Customer Support Available</p>
+                        <p class="contact-detail">Phone: 1800-208-9898</p>
+                        <p class="contact-detail">Email: support@flipkart.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Head Office</h3>
+                        <p>Apni Dukan Private Limited</p>
+                        <p class="contact-detail">Lovely Professional University</p>
+                        <p class="contact-detail">Phagwara, Jalandhar 144411</p>
+                        <p class="contact-detail">India</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Business Inquiries</h3>
+                        <p>For partnership and business opportunities</p>
+                        <p class="contact-detail">Email: business@apnidukan.com</p>
+                        <p class="contact-detail">Phone: 1800-208-9898</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>FAQs & Help Center</h3>
+                        <p>Find answers to common questions</p>
+                        <p class="contact-detail">Visit: help.apnidukan.com</p>
+                        <p class="contact-detail">Live Chat Available</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-section">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Your Name *</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <input type="text" id="contactSubject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactCategory">Category</label>
+                            <select id="contactCategory">
+                                <option value="general">General Inquiry</option>
+                                <option value="order">Order Related</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="return">Return & Refund</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="business">Business Partnership</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="button" class="back-to-home-btn" id="backToHomeBtn">Back to Home</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="social-media">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal">
+            <h2>Checkout</h2>
+            <h3 id="checkoutProductTitle"></h3>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkoutEmail">Email Address</label>
+                    <input type="email" id="checkoutEmail" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pincode">Pin Code</label>
+                        <input type="text" id="pincode" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Full Address</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="confirm-btn">Confirm Order</button>
+                    <button type="button" class="cancel-btn" id="cancelCheckout">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
